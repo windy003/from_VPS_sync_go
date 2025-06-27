@@ -1087,3 +1087,754 @@
 2025/06/27 19:45:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
 2025/06/27 19:45:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
 2025/06/27 19:45:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:45:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:45:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:45:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:45:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:45:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:45:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:45:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:45:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:45:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:45:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:45:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:45:11 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:45:11 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:45:11 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:45:11 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:45:11 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:45:11 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:45:11 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:45:11 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:45:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:45:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:45:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:45:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:45:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:45:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:45:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:45:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:45:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:45:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:45:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:45:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:45:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:45:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:45:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:45:14 目录扫描完成
+2025/06/27 19:45:38 开始扫描远程目录...
+2025/06/27 19:45:38 扫描目录: /root/web
+2025/06/27 19:45:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:45:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:45:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:45:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:45:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:45:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:45:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:45:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:45:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:45:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:45:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:45:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:45:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:45:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:45:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:45:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:45:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:45:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:45:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:45:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:45:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:45:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:45:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:45:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:45:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:45:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:45:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:45:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:45:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:45:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:45:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:45:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:45:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:45:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:45:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:45:44 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:45:44 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:45:44 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:45:44 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:45:44 目录扫描完成
+2025/06/27 19:46:08 开始扫描远程目录...
+2025/06/27 19:46:08 扫描目录: /root/web
+2025/06/27 19:46:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:46:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:46:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:46:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:46:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:46:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:46:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:46:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:46:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:46:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:46:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:46:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:46:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:46:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:46:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:46:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:46:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:46:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:46:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:46:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:46:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:46:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:46:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:46:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:46:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:46:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:46:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:46:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:46:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:46:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:46:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:46:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:46:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:46:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:46:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:46:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:46:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:46:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:46:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:46:14 目录扫描完成
+2025/06/27 19:46:38 开始扫描远程目录...
+2025/06/27 19:46:38 扫描目录: /root/web
+2025/06/27 19:46:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:46:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:46:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:46:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:46:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:46:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:46:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:46:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:46:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:46:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:46:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:46:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:46:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:46:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:46:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:46:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:46:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:46:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:46:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:46:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:46:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:46:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:46:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:46:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:46:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:46:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:46:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:46:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:46:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:46:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:46:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:46:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:46:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:46:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:46:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:46:45 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:46:45 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:46:45 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:46:45 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:46:45 目录扫描完成
+2025/06/27 19:47:08 开始扫描远程目录...
+2025/06/27 19:47:08 扫描目录: /root/web
+2025/06/27 19:47:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:47:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:47:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:47:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:47:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:47:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:47:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:47:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:47:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:47:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:47:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:47:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:47:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:47:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:47:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:47:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:47:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:47:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:47:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:47:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:47:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:47:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:47:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:47:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:47:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:47:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:47:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:47:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:47:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:47:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:47:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:47:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:47:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:47:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:47:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:47:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:47:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:47:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:47:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:47:14 目录扫描完成
+2025/06/27 19:47:38 开始扫描远程目录...
+2025/06/27 19:47:38 扫描目录: /root/web
+2025/06/27 19:47:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:47:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:47:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:47:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:47:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:47:41 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:47:41 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:47:41 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:47:41 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:47:41 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:47:41 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:47:41 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:47:41 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:47:41 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:47:41 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:47:41 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:47:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:47:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:47:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:47:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:47:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:47:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:47:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:47:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:47:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:47:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:47:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:47:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:47:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:47:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:47:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:47:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:47:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:47:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:47:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:47:45 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:47:45 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:47:45 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:47:45 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:47:45 目录扫描完成
+2025/06/27 19:48:08 开始扫描远程目录...
+2025/06/27 19:48:08 扫描目录: /root/web
+2025/06/27 19:48:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:48:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:48:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:48:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:48:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:48:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:48:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:48:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:48:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:48:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:48:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:48:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:48:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:48:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:48:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:48:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:48:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:48:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:48:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:48:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:48:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:48:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:48:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:48:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:48:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:48:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:48:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:48:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:48:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:48:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:48:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:48:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:48:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:48:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:48:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:48:15 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:48:15 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:48:15 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:48:15 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:48:15 目录扫描完成
+2025/06/27 19:48:38 开始扫描远程目录...
+2025/06/27 19:48:38 扫描目录: /root/web
+2025/06/27 19:48:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:48:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:48:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:48:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:48:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:48:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:48:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:48:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:48:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:48:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:48:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:48:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:48:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:48:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:48:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:48:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:48:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:48:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:48:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:48:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:48:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:48:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:48:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:48:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:48:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:48:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:48:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:48:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:48:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:48:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:48:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:48:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:48:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:48:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:48:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:48:44 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:48:44 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:48:44 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:48:44 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:48:44 目录扫描完成
+2025/06/27 19:49:08 开始扫描远程目录...
+2025/06/27 19:49:08 扫描目录: /root/web
+2025/06/27 19:49:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:49:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:49:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:49:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:49:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:49:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:49:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:49:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:49:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:49:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:49:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:49:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:49:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:49:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:49:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:49:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:49:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:49:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:49:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:49:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:49:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:49:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:49:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:49:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:49:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:49:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:49:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:49:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:49:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:49:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:49:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:49:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:49:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:49:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:49:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:49:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:49:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:49:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:49:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:49:14 目录扫描完成
+2025/06/27 19:49:38 开始扫描远程目录...
+2025/06/27 19:49:38 扫描目录: /root/web
+2025/06/27 19:49:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:49:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:49:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:49:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:49:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:49:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:49:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:49:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:49:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:49:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:49:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:49:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:49:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:49:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:49:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:49:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:49:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:49:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:49:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:49:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:49:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:49:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:49:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:49:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:49:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:49:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:49:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:49:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:49:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:49:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:49:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:49:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:49:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:49:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:49:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:49:44 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:49:44 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:49:44 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:49:44 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:49:44 目录扫描完成
+2025/06/27 19:50:08 开始扫描远程目录...
+2025/06/27 19:50:08 扫描目录: /root/web
+2025/06/27 19:50:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:50:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:50:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:50:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:50:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:50:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:50:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:50:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:50:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:50:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:50:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:50:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:50:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:50:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:50:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:50:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:50:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:50:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:50:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:50:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:50:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:50:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:50:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:50:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:50:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:50:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:50:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:50:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:50:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:50:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:50:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:50:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:50:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:50:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:50:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:50:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:50:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:50:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:50:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:50:14 目录扫描完成
+2025/06/27 19:50:38 开始扫描远程目录...
+2025/06/27 19:50:38 扫描目录: /root/web
+2025/06/27 19:50:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:50:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:50:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:50:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:50:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:50:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:50:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:50:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:50:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:50:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:50:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:50:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:50:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:50:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:50:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:50:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:50:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:50:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:50:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:50:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:50:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:50:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:50:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:50:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:50:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:50:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:50:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:50:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:50:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:50:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:50:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:50:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:50:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:50:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:50:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:50:44 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:50:44 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:50:44 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:50:44 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:50:44 目录扫描完成
+2025/06/27 19:51:08 开始扫描远程目录...
+2025/06/27 19:51:08 扫描目录: /root/web
+2025/06/27 19:51:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:51:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:51:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:51:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:51:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:51:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:51:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:51:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:51:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:51:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:51:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:51:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:51:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:51:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:51:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:51:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:51:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:51:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:51:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:51:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:51:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:51:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:51:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:51:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:51:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:51:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:51:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:51:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:51:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:51:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:51:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:51:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:51:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:51:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:51:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:51:15 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:51:15 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:51:15 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:51:15 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:51:15 目录扫描完成
+2025/06/27 19:51:38 开始扫描远程目录...
+2025/06/27 19:51:38 扫描目录: /root/web
+2025/06/27 19:51:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:51:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:51:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:51:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:51:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:51:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:51:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:51:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:51:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:51:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:51:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:51:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:51:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:51:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:51:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:51:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:51:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:51:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:51:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:51:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:51:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:51:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:51:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:51:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:51:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:51:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:51:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:51:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:51:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:51:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:51:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:51:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:51:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:51:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:51:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:51:45 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:51:45 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:51:45 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:51:45 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:51:45 目录扫描完成
+2025/06/27 19:52:08 开始扫描远程目录...
+2025/06/27 19:52:08 扫描目录: /root/web
+2025/06/27 19:52:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:52:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:52:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:52:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:52:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:52:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:52:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:52:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:52:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:52:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:52:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:52:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:52:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:52:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:52:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:52:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:52:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:52:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:52:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:52:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:52:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:52:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:52:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:52:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:52:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:52:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:52:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:52:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:52:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:52:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:52:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:52:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:52:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:52:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:52:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:52:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:52:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:52:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:52:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:52:14 目录扫描完成
+2025/06/27 19:52:38 开始扫描远程目录...
+2025/06/27 19:52:38 扫描目录: /root/web
+2025/06/27 19:52:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:52:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:52:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:52:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:52:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:52:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:52:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:52:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:52:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:52:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:52:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:52:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:52:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:52:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:52:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:52:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:52:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:52:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:52:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:52:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:52:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:52:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:52:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:52:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:52:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:52:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:52:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:52:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:52:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:52:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:52:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:52:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:52:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:52:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:52:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:52:44 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:52:44 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:52:44 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:52:44 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:52:44 目录扫描完成
+2025/06/27 19:53:08 开始扫描远程目录...
+2025/06/27 19:53:08 扫描目录: /root/web
+2025/06/27 19:53:09 发现 2 个条目在目录: /root/web
+2025/06/27 19:53:09 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:53:09 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:53:09 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:53:09 扫描目录: /root/web/web_note_3
+2025/06/27 19:53:10 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:53:10 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:53:10 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:53:10 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:53:10 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:53:10 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:53:10 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:53:10 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:53:10 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:53:10 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:53:10 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:53:12 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:53:12 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:53:12 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:53:12 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:53:12 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:53:12 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:53:12 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:53:12 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:53:13 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:53:13 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:53:13 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:53:13 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:53:13 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:53:13 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:53:13 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:53:13 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:53:13 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:53:13 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:53:13 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:53:14 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:53:14 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:53:14 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:53:14 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:53:14 目录扫描完成
+2025/06/27 19:53:38 开始扫描远程目录...
+2025/06/27 19:53:38 扫描目录: /root/web
+2025/06/27 19:53:39 发现 2 个条目在目录: /root/web
+2025/06/27 19:53:39 处理条目: /root/web/web_note_3 (大小: 4096, 是否目录: true)
+2025/06/27 19:53:39 映射路径: /root/web/web_note_3 -> D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:53:39 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3
+2025/06/27 19:53:39 扫描目录: /root/web/web_note_3
+2025/06/27 19:53:40 发现 3 个条目在目录: /root/web/web_note_3
+2025/06/27 19:53:40 处理条目: /root/web/web_note_3/docker-compose.prod.yml (大小: 1314, 是否目录: false)
+2025/06/27 19:53:40 映射路径: /root/web/web_note_3/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_note_3\docker-compose.prod.yml
+2025/06/27 19:53:40 文件无需同步: /root/web/web_note_3/docker-compose.prod.yml
+2025/06/27 19:53:40 处理条目: /root/web/web_note_3/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:53:40 映射路径: /root/web/web_note_3/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_note_3\deploy.sh
+2025/06/27 19:53:40 文件无需同步: /root/web/web_note_3/deploy.sh
+2025/06/27 19:53:40 处理条目: /root/web/web_note_3/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:53:40 映射路径: /root/web/web_note_3/instance -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:53:40 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_note_3\instance
+2025/06/27 19:53:40 扫描目录: /root/web/web_note_3/instance
+2025/06/27 19:53:42 发现 1 个条目在目录: /root/web/web_note_3/instance
+2025/06/27 19:53:42 处理条目: /root/web/web_note_3/instance/notes.db (大小: 77824, 是否目录: false)
+2025/06/27 19:53:42 映射路径: /root/web/web_note_3/instance/notes.db -> D:\files\vps_backup\144.202.26.208\web\web_note_3\instance\notes.db
+2025/06/27 19:53:42 文件无需同步: /root/web/web_note_3/instance/notes.db
+2025/06/27 19:53:42 处理条目: /root/web/web_bg_cr (大小: 4096, 是否目录: true)
+2025/06/27 19:53:42 映射路径: /root/web/web_bg_cr -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:53:42 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr
+2025/06/27 19:53:42 扫描目录: /root/web/web_bg_cr
+2025/06/27 19:53:43 发现 3 个条目在目录: /root/web/web_bg_cr
+2025/06/27 19:53:43 处理条目: /root/web/web_bg_cr/docker-compose.prod.yml (大小: 1250, 是否目录: false)
+2025/06/27 19:53:43 映射路径: /root/web/web_bg_cr/docker-compose.prod.yml -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\docker-compose.prod.yml
+2025/06/27 19:53:43 文件无需同步: /root/web/web_bg_cr/docker-compose.prod.yml
+2025/06/27 19:53:43 处理条目: /root/web/web_bg_cr/deploy.sh (大小: 192, 是否目录: false)
+2025/06/27 19:53:43 映射路径: /root/web/web_bg_cr/deploy.sh -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\deploy.sh
+2025/06/27 19:53:43 文件无需同步: /root/web/web_bg_cr/deploy.sh
+2025/06/27 19:53:43 处理条目: /root/web/web_bg_cr/instance (大小: 4096, 是否目录: true)
+2025/06/27 19:53:43 映射路径: /root/web/web_bg_cr/instance -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:53:43 创建本地目录: D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance
+2025/06/27 19:53:43 扫描目录: /root/web/web_bg_cr/instance
+2025/06/27 19:53:44 发现 1 个条目在目录: /root/web/web_bg_cr/instance
+2025/06/27 19:53:44 处理条目: /root/web/web_bg_cr/instance/bible_titles.db (大小: 45056, 是否目录: false)
+2025/06/27 19:53:44 映射路径: /root/web/web_bg_cr/instance/bible_titles.db -> D:\files\vps_backup\144.202.26.208\web\web_bg_cr\instance\bible_titles.db
+2025/06/27 19:53:44 文件无需同步: /root/web/web_bg_cr/instance/bible_titles.db
+2025/06/27 19:53:44 目录扫描完成
+2025/06/27 19:53:53 停止VPS目录同步服务...
+2025/06/27 19:53:53 VPS目录同步服务已停止
