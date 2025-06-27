@@ -37,6 +37,8 @@ type Config struct {
 	EnableResume          bool     `json:"enable_resume"`
 	LargeFileThreshold    int64    `json:"large_file_threshold"`
 	BufferSize            int      `json:"buffer_size"`
+	MirrorSync            bool     `json:"mirror_sync"`
+	DeleteLocalFiles      bool     `json:"delete_local_files"`
 }
 
 type FileInfo struct {
@@ -51,15 +53,22 @@ type SyncTask struct {
 	Size       int64
 }
 
+type DeleteTask struct {
+	LocalPath string
+	IsDir     bool
+}
+
 type VPSSync struct {
-	config     *Config
-	sshClient  *ssh.Client
-	sftpClient *sftp.Client
-	fileCache  map[string]FileInfo
-	syncQueue  chan SyncTask
-	mu         sync.RWMutex
-	ctx        context.Context
-	cancel     context.CancelFunc
+	config       *Config
+	sshClient    *ssh.Client
+	sftpClient   *sftp.Client
+	fileCache    map[string]FileInfo
+	syncQueue    chan SyncTask
+	deleteQueue  chan DeleteTask
+	remoteFiles  map[string]bool
+	mu           sync.RWMutex
+	ctx          context.Context
+	cancel       context.CancelFunc
 }
 
 func NewVPSSync(configPath string) (*VPSSync, error) {
@@ -71,11 +80,13 @@ func NewVPSSync(configPath string) (*VPSSync, error) {
 	ctx, cancel := context.WithCancel(context.Background())
 	
 	return &VPSSync{
-		config:    config,
-		fileCache: make(map[string]FileInfo),
-		syncQueue: make(chan SyncTask, 1000),
-		ctx:       ctx,
-		cancel:    cancel,
+		config:      config,
+		fileCache:   make(map[string]FileInfo),
+		syncQueue:   make(chan SyncTask, 1000),
+		deleteQueue: make(chan DeleteTask, 1000),
+		remoteFiles: make(map[string]bool),
+		ctx:         ctx,
+		cancel:      cancel,
 	}, nil
 }
 
@@ -173,6 +184,56 @@ func (vs *VPSSync) shouldExclude(path string) bool {
 	return false
 }
 
+func (vs *VPSSync) scanLocalFiles(localPath string, remoteBasePath string) error {
+	return filepath.Walk(localPath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+
+		// 跳过根目录
+		if path == localPath {
+			return nil
+		}
+
+		// 计算相对路径
+		relPath, err := filepath.Rel(localPath, path)
+		if err != nil {
+			return err
+		}
+
+		// 转换为远程路径格式（使用正斜杠）
+		remotePath := remoteBasePath + "/" + strings.ReplaceAll(relPath, "\\", "/")
+		remotePath = strings.ReplaceAll(remotePath, "//", "/")
+
+		// 检查是否应该排除
+		if vs.shouldExclude(remotePath) {
+			if info.IsDir() {
+				return filepath.SkipDir
+			}
+			return nil
+		}
+
+		vs.mu.RLock()
+		exists := vs.remoteFiles[remotePath]
+		vs.mu.RUnlock()
+
+		// 如果远程不存在此文件/目录，加入删除队列
+		if !exists && vs.config.MirrorSync && vs.config.DeleteLocalFiles {
+			select {
+			case vs.deleteQueue <- DeleteTask{
+				LocalPath: path,
+				IsDir:     info.IsDir(),
+			}:
+				log.Printf("本地多余文件/目录已加入删除队列: %s", path)
+			case <-vs.ctx.Done():
+				return vs.ctx.Err()
+			}
+		}
+
+		return nil
+	})
+}
+
 func (vs *VPSSync) scanDirectory(remotePath, localBase string) error {
 	log.Printf("扫描目录: %s", remotePath)
 	
@@ -196,6 +257,11 @@ func (vs *VPSSync) scanDirectory(remotePath, localBase string) error {
 			log.Printf("排除文件: %s", remoteItemPath)
 			continue
 		}
+
+		// 记录远程文件/目录
+		vs.mu.Lock()
+		vs.remoteFiles[remoteItemPath] = true
+		vs.mu.Unlock()
 
 		// 计算相对路径
 		relPath := strings.TrimPrefix(remoteItemPath, vs.config.RemoteWatchPath)
@@ -251,6 +317,26 @@ func (vs *VPSSync) scanDirectory(remotePath, localBase string) error {
 		}
 	}
 
+	return nil
+}
+
+func (vs *VPSSync) deleteLocalFile(task DeleteTask) error {
+	log.Printf("删除本地文件/目录: %s (是否目录: %v)", task.LocalPath, task.IsDir)
+	
+	if task.IsDir {
+		err := os.RemoveAll(task.LocalPath)
+		if err != nil {
+			return fmt.Errorf("删除本地目录失败: %v", err)
+		}
+		log.Printf("成功删除本地目录: %s", task.LocalPath)
+	} else {
+		err := os.Remove(task.LocalPath)
+		if err != nil {
+			return fmt.Errorf("删除本地文件失败: %v", err)
+		}
+		log.Printf("成功删除本地文件: %s", task.LocalPath)
+	}
+	
 	return nil
 }
 
@@ -473,6 +559,13 @@ func (vs *VPSSync) monitorLoop() {
 			return
 		case <-ticker.C:
 			log.Printf("开始扫描远程目录...")
+			
+			// 清空远程文件列表
+			vs.mu.Lock()
+			vs.remoteFiles = make(map[string]bool)
+			vs.mu.Unlock()
+			
+			// 扫描远程目录
 			if err := vs.scanDirectory(vs.config.RemoteWatchPath, vs.config.LocalSyncPath); err != nil {
 				log.Printf("扫描目录失败: %v", err)
 				// 尝试重新连接
@@ -481,6 +574,15 @@ func (vs *VPSSync) monitorLoop() {
 					log.Printf("重新连接失败: %v", err)
 				}
 			}
+			
+			// 如果启用镜像同步，扫描本地文件以查找需要删除的文件
+			if vs.config.MirrorSync {
+				log.Printf("开始扫描本地文件，查找需要删除的文件...")
+				if err := vs.scanLocalFiles(vs.config.LocalSyncPath, vs.config.RemoteWatchPath); err != nil {
+					log.Printf("扫描本地文件失败: %v", err)
+				}
+			}
+			
 			log.Printf("目录扫描完成")
 		}
 	}
@@ -490,48 +592,69 @@ func (vs *VPSSync) syncLoop() {
 	ticker := time.NewTicker(time.Duration(vs.config.SyncInterval) * time.Second)
 	defer ticker.Stop()
 
-	var tasks []SyncTask
+	var syncTasks []SyncTask
+	var deleteTasks []DeleteTask
 	
 	for {
 		select {
 		case <-vs.ctx.Done():
 			return
 		case task := <-vs.syncQueue:
-			tasks = append(tasks, task)
-			log.Printf("收到同步任务: %s (队列长度: %d)", task.RemotePath, len(tasks))
+			syncTasks = append(syncTasks, task)
+			log.Printf("收到同步任务: %s (队列长度: %d)", task.RemotePath, len(syncTasks))
+		case task := <-vs.deleteQueue:
+			deleteTasks = append(deleteTasks, task)
+			log.Printf("收到删除任务: %s (队列长度: %d)", task.LocalPath, len(deleteTasks))
 		case <-ticker.C:
-			if len(tasks) == 0 {
+			totalTasks := len(syncTasks) + len(deleteTasks)
+			if totalTasks == 0 {
 				continue
 			}
 
-			log.Printf("开始同步 %d 个文件", len(tasks))
+			log.Printf("开始处理 %d 个同步任务和 %d 个删除任务", len(syncTasks), len(deleteTasks))
 			
-			// 使用goroutine池并发下载
-			semaphore := make(chan struct{}, vs.config.MaxConcurrentDownloads)
-			var wg sync.WaitGroup
-			
-			for _, task := range tasks {
-				wg.Add(1)
-				go func(t SyncTask) {
-					defer wg.Done()
-					semaphore <- struct{}{}
-					defer func() { <-semaphore }()
-					
-					for retry := 0; retry < vs.config.MaxRetries; retry++ {
-						if err := vs.downloadFile(t); err != nil {
-							log.Printf("下载失败 (重试 %d/%d): %s - %v", 
-								retry+1, vs.config.MaxRetries, t.RemotePath, err)
-							time.Sleep(time.Duration(1<<retry) * time.Second)
-						} else {
-							break
-						}
+			// 处理删除任务
+			if len(deleteTasks) > 0 {
+				log.Printf("开始处理删除任务...")
+				for _, task := range deleteTasks {
+					if err := vs.deleteLocalFile(task); err != nil {
+						log.Printf("删除失败: %s - %v", task.LocalPath, err)
 					}
-				}(task)
+				}
+				deleteTasks = deleteTasks[:0] // 清空切片
 			}
 			
-			wg.Wait()
-			log.Printf("批次同步完成，处理了 %d 个文件", len(tasks))
-			tasks = tasks[:0] // 清空切片
+			// 处理同步任务
+			if len(syncTasks) > 0 {
+				log.Printf("开始处理同步任务...")
+				// 使用goroutine池并发下载
+				semaphore := make(chan struct{}, vs.config.MaxConcurrentDownloads)
+				var wg sync.WaitGroup
+				
+				for _, task := range syncTasks {
+					wg.Add(1)
+					go func(t SyncTask) {
+						defer wg.Done()
+						semaphore <- struct{}{}
+						defer func() { <-semaphore }()
+						
+						for retry := 0; retry < vs.config.MaxRetries; retry++ {
+							if err := vs.downloadFile(t); err != nil {
+								log.Printf("下载失败 (重试 %d/%d): %s - %v", 
+									retry+1, vs.config.MaxRetries, t.RemotePath, err)
+								time.Sleep(time.Duration(1<<retry) * time.Second)
+							} else {
+								break
+							}
+						}
+					}(task)
+				}
+				
+				wg.Wait()
+				syncTasks = syncTasks[:0] // 清空切片
+			}
+			
+			log.Printf("批次处理完成，处理了 %d 个任务", totalTasks)
 		}
 	}
 }
@@ -550,7 +673,11 @@ func (vs *VPSSync) Start() error {
 	go vs.monitorLoop()
 	go vs.syncLoop()
 
-	log.Println("VPS目录同步服务已启动")
+	if vs.config.MirrorSync {
+		log.Println("VPS目录镜像同步服务已启动")
+	} else {
+		log.Println("VPS目录单向同步服务已启动")
+	}
 	return nil
 }
 
@@ -605,11 +732,14 @@ func createSampleConfig() {
 		EnableResume:          true,
 		LargeFileThreshold:    10 * 1024 * 1024,
 		BufferSize:            64 * 1024,
+		MirrorSync:            false,
+		DeleteLocalFiles:      false,
 	}
 
 	data, _ := json.MarshalIndent(config, "", "  ")
 	os.WriteFile("vps_sync_config.json", data, 0644)
 	fmt.Println("已创建示例配置文件: vps_sync_config.json")
+	fmt.Println("要启用镜像同步，请将配置文件中的 mirror_sync 和 delete_local_files 设置为 true")
 }
 
 func main() {
