@@ -745,7 +745,6 @@ func createSampleConfig() {
 func main() {
 	var configPath = flag.String("config", "vps_sync_config.json", "配置文件路径")
 	var createConfig = flag.Bool("create-config", false, "创建示例配置文件")
-	var background = flag.Bool("background", false, "后台运行模式")
 	flag.Parse()
 
 	if *createConfig {
@@ -753,10 +752,6 @@ func main() {
 		return
 	}
 
-	// 如果是后台运行模式，输出提示信息
-	if *background {
-		log.Println("以后台模式启动...")
-	}
 
 	sync, err := NewVPSSync(*configPath)
 	if err != nil {
