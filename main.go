@@ -762,12 +762,13 @@ func createSampleConfig() {
 	fmt.Println("要启用镜像同步，请将配置文件中的 mirror_sync 和 delete_local_files 设置为 true")
 }
 
-func manageLogFile(filePath string, maxLines, linesToDelete int) {
+// manageLogFile 定期检查日志文件，如果超过maxLines，则截断文件以仅保留最新的 linesToKeep 行。
+func manageLogFile(filePath string, maxLines, linesToKeep int) {
 	ticker := time.NewTicker(1 * time.Minute) // 每分钟检查一次
 	defer ticker.Stop()
 
 	for range ticker.C {
-		file, err := os.OpenFile(filePath, os.O_RDWR, 0666)
+		file, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0666)
 		if err != nil {
 			log.Printf("无法打开日志文件进行管理 %s: %v", filePath, err)
 			continue
@@ -781,17 +782,26 @@ func manageLogFile(filePath string, maxLines, linesToDelete int) {
 
 		if len(lines) > maxLines {
 			log.Printf("日志文件 %s 超过 %d 行，开始截断", filePath, maxLines)
+
+			// 计算要保留的行的起始位置
+			start := 0
+			if len(lines) > linesToKeep {
+				start = len(lines) - linesToKeep
+			}
 			
+			// 获取要保留的行
+			linesToRetain := lines[start:]
+
 			// 重置文件指针到开头并清空文件
 			file.Seek(0, 0)
 			file.Truncate(0)
 
 			writer := bufio.NewWriter(file)
-			for i := linesToDelete; i < len(lines); i++ {
-				fmt.Fprintln(writer, lines[i])
+			for _, line := range linesToRetain {
+				fmt.Fprintln(writer, line)
 			}
 			writer.Flush()
-			log.Printf("成功截断日志文件 %s，保留了 %d 行", filePath, len(lines)-linesToDelete)
+			log.Printf("成功截断日志文件 %s，保留了 %d 行", filePath, len(linesToRetain))
 		}
 		file.Close()
 	}
@@ -818,8 +828,8 @@ func main() {
 	hideConsoleWindow()
 
 	// 启动日志文件管理器
-	go manageLogFile("out.txt", 10000, 5000)
-	go manageLogFile("error.txt", 10000, 5000)
+	go manageLogFile("out.txt", 10000, 5000) // 保留最新的 5000 行
+	go manageLogFile("error.txt", 10000, 5000) // 保留最新的 5000 行
 
 	var configPath = flag.String("config", "vps_sync_config.json", "配置文件路径")
 	var createConfig = flag.Bool("create-config", false, "创建示例配置文件")
