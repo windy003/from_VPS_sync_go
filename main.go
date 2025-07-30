@@ -1,6 +1,10 @@
+// To build a windowless executable on Windows, use the following command:
+// go build -ldflags="-H windowsgui"
+
 package main
 
 import (
+	"bufio"
 	"context"
 	"encoding/json"
 	"flag"
@@ -18,6 +22,22 @@ import (
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
 )
+
+func hideConsoleWindow() {
+	console := syscall.NewLazyDLL("kernel32.dll").NewProc("GetConsoleWindow")
+	if console.Find() != nil {
+		return
+	}
+	hide := syscall.NewLazyDLL("user32.dll").NewProc("ShowWindow")
+	if hide.Find() != nil {
+		return
+	}
+	hwnd, _, _ := console.Call()
+	if hwnd == 0 {
+		return
+	}
+	hide.Call(hwnd, 0)
+}
 
 type Config struct {
 	VPSHost                string   `json:"vps_host"`
@@ -742,7 +762,65 @@ func createSampleConfig() {
 	fmt.Println("要启用镜像同步，请将配置文件中的 mirror_sync 和 delete_local_files 设置为 true")
 }
 
+func manageLogFile(filePath string, maxLines, linesToDelete int) {
+	ticker := time.NewTicker(1 * time.Minute) // 每分钟检查一次
+	defer ticker.Stop()
+
+	for range ticker.C {
+		file, err := os.OpenFile(filePath, os.O_RDWR, 0666)
+		if err != nil {
+			log.Printf("无法打开日志文件进行管理 %s: %v", filePath, err)
+			continue
+		}
+
+		scanner := bufio.NewScanner(file)
+		var lines []string
+		for scanner.Scan() {
+			lines = append(lines, scanner.Text())
+		}
+
+		if len(lines) > maxLines {
+			log.Printf("日志文件 %s 超过 %d 行，开始截断", filePath, maxLines)
+			
+			// 重置文件指针到开头并清空文件
+			file.Seek(0, 0)
+			file.Truncate(0)
+
+			writer := bufio.NewWriter(file)
+			for i := linesToDelete; i < len(lines); i++ {
+				fmt.Fprintln(writer, lines[i])
+			}
+			writer.Flush()
+			log.Printf("成功截断日志文件 %s，保留了 %d 行", filePath, len(lines)-linesToDelete)
+		}
+		file.Close()
+	}
+}
+
 func main() {
+	// 启动时重写日志文件
+	logFile, err := os.OpenFile("out.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+	if err != nil {
+		log.Panic("无法打开日志文件:", err)
+	}
+	log.SetOutput(logFile)
+
+	errFile, err := os.OpenFile("error.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+	if err != nil {
+		log.Panic("无法打开错误日志文件:", err)
+	}
+	defer errFile.Close()
+
+	// 将标准错误重定向到错误文件
+	os.Stderr = errFile
+
+	// 隐藏控制台窗口
+	hideConsoleWindow()
+
+	// 启动日志文件管理器
+	go manageLogFile("out.txt", 10000, 5000)
+	go manageLogFile("error.txt", 10000, 5000)
+
 	var configPath = flag.String("config", "vps_sync_config.json", "配置文件路径")
 	var createConfig = flag.Bool("create-config", false, "创建示例配置文件")
 	flag.Parse()
