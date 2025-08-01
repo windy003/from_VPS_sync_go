@@ -1,5 +1,5 @@
 // To build a windowless executable on Windows, use the following command:
-// go build -ldflags="-H windowsgui"
+// go build -ldflags="-H windowsgui" -o "vps_sync-2025-8-1-1.exe"
 
 package main
 
@@ -586,20 +586,21 @@ func (vs *VPSSync) monitorLoop() {
 			vs.mu.Unlock()
 			
 			// 扫描远程目录
-			if err := vs.scanDirectory(vs.config.RemoteWatchPath, vs.config.LocalSyncPath); err != nil {
+			err := vs.scanDirectory(vs.config.RemoteWatchPath, vs.config.LocalSyncPath)
+			if err != nil {
 				log.Printf("扫描目录失败: %v", err)
 				// 尝试重新连接
 				vs.Disconnect()
 				if err := vs.Connect(); err != nil {
 					log.Printf("重新连接失败: %v", err)
 				}
-			}
-			
-			// 如果启用镜像同步，扫描本地文件以查找需要删除的文件
-			if vs.config.MirrorSync {
-				log.Printf("开始扫描本地文件，查找需要删除的文件...")
-				if err := vs.scanLocalFiles(vs.config.LocalSyncPath, vs.config.RemoteWatchPath); err != nil {
-					log.Printf("扫描本地文件失败: %v", err)
+			} else {
+				// 如果启用镜像同步，扫描本地文件以查找需要删除的文件
+				if vs.config.MirrorSync {
+					log.Printf("开始扫描本地文件，查找需要删除的文件...")
+					if err := vs.scanLocalFiles(vs.config.LocalSyncPath, vs.config.RemoteWatchPath); err != nil {
+						log.Printf("扫描本地文件失败: %v", err)
+					}
 				}
 			}
 			
