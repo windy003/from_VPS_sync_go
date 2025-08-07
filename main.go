@@ -18,6 +18,7 @@ import (
 	"sync"
 	"syscall"
 	"time"
+	"unsafe"
 
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
@@ -37,6 +38,52 @@ func hideConsoleWindow() {
 		return
 	}
 	hide.Call(hwnd, 0)
+}
+
+func checkSingleInstance() bool {
+	mutexName := "Global\\VPSSync_SingleInstance_Mutex_12345"
+	
+	kernel32 := syscall.NewLazyDLL("kernel32.dll")
+	createMutex := kernel32.NewProc("CreateMutexW")
+	
+	mutexNamePtr, err := syscall.UTF16PtrFromString(mutexName)
+	if err != nil {
+		showMessageBox("错误", "无法创建互斥体名称")
+		return false
+	}
+	
+	handle, _, err := createMutex.Call(
+		0,  // 默认安全属性
+		1,  // 初始拥有者
+		uintptr(unsafe.Pointer(mutexNamePtr)),
+	)
+	
+	if handle == 0 {
+		showMessageBox("错误", "无法创建互斥体")
+		return false
+	}
+	
+	// 检查GetLastError，如果返回ERROR_ALREADY_EXISTS (183)则说明已有实例
+	if err.(syscall.Errno) == 183 {
+		return false
+	}
+	
+	return true
+}
+
+func showMessageBox(title, message string) {
+	user32 := syscall.NewLazyDLL("user32.dll")
+	messageBox := user32.NewProc("MessageBoxW")
+	
+	titlePtr, _ := syscall.UTF16PtrFromString(title)
+	messagePtr, _ := syscall.UTF16PtrFromString(message)
+	
+	messageBox.Call(
+		0,  // 父窗口句柄
+		uintptr(unsafe.Pointer(messagePtr)),
+		uintptr(unsafe.Pointer(titlePtr)),
+		0x40, // MB_ICONINFORMATION
+	)
 }
 
 type Config struct {
@@ -809,6 +856,12 @@ func manageLogFile(filePath string, maxLines, linesToKeep int) {
 }
 
 func main() {
+	// 检查是否已有实例在运行
+	if !checkSingleInstance() {
+		showMessageBox("VPS同步工具", "程序已经在运行中！\n请检查系统托盘或任务管理器。")
+		return
+	}
+
 	// 启动时重写日志文件
 	logFile, err := os.OpenFile("out.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
 	if err != nil {
