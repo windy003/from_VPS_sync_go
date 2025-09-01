@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(go build:*)"
+      "Bash(go build:*)",
+      "Bash(go run:*)",
+      "Bash(dir:*)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web\\web_note_3\\instance/**)"
     ],
     "deny": []
   }

@@ -6,6 +6,8 @@ package main
 import (
 	"bufio"
 	"context"
+	"crypto/md5"
+	"encoding/hex"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -106,6 +108,7 @@ type Config struct {
 	BufferSize            int      `json:"buffer_size"`
 	MirrorSync            bool     `json:"mirror_sync"`
 	DeleteLocalFiles      bool     `json:"delete_local_files"`
+	UseChecksumVerify     bool     `json:"use_checksum_verify"`
 }
 
 type FileInfo struct {
@@ -357,12 +360,66 @@ func (vs *VPSSync) scanDirectory(remotePath, localBase string) error {
 				ModTime: entry.ModTime().Unix(),
 			}
 
-			vs.mu.RLock()
-			cached, exists := vs.fileCache[remoteItemPath]
-			vs.mu.RUnlock()
+			needsSync := false
+			reason := ""
 
-			if !exists || cached.Size != fileInfo.Size || cached.ModTime != fileInfo.ModTime {
-				log.Printf("文件需要同步: %s (大小: %d)", remoteItemPath, entry.Size())
+			// 首先检查本地文件是否存在
+			localStat, localErr := os.Stat(localPath)
+			if localErr != nil {
+				needsSync = true
+				reason = "本地文件不存在"
+			} else {
+				// 详细记录时间和大小信息用于调试
+				localTime := localStat.ModTime().Unix()
+				remoteTime := fileInfo.ModTime
+				timeDiff := abs(localTime - remoteTime)
+				
+				log.Printf("调试信息 - 文件: %s", remoteItemPath)
+				log.Printf("  本地大小: %d, 远程大小: %d", localStat.Size(), fileInfo.Size)
+				log.Printf("  本地时间: %d (%s)", localTime, time.Unix(localTime, 0).Format("2006-01-02 15:04:05"))
+				log.Printf("  远程时间: %d (%s)", remoteTime, time.Unix(remoteTime, 0).Format("2006-01-02 15:04:05"))
+				log.Printf("  时间差异: %d 秒", timeDiff)
+				
+				// 本地文件存在，进行各项比较
+				if localStat.Size() != fileInfo.Size {
+					needsSync = true
+					reason = fmt.Sprintf("文件大小不同 (本地:%d vs 远程:%d)", localStat.Size(), fileInfo.Size)
+				} else if timeDiff > 2 {
+					// 允许2秒的时间误差（考虑到网络延迟和精度问题）
+					needsSync = true
+					reason = fmt.Sprintf("修改时间不同 (本地:%s vs 远程:%s, 相差%d秒)", 
+						time.Unix(localTime, 0).Format("2006-01-02 15:04:05"),
+						time.Unix(remoteTime, 0).Format("2006-01-02 15:04:05"),
+						timeDiff)
+				} else if vs.config.UseChecksumVerify {
+					// 如果大小和时间都相同，但启用了校验和验证
+					log.Printf("  开始校验和检查...")
+					localChecksum, err1 := calculateFileChecksum(localPath)
+					if err1 == nil {
+						remoteChecksum, err2 := vs.calculateRemoteFileChecksum(remoteItemPath)
+						if err2 == nil {
+							log.Printf("  本地校验和: %s", localChecksum)
+							log.Printf("  远程校验和: %s", remoteChecksum)
+							if localChecksum != remoteChecksum {
+								needsSync = true
+								reason = fmt.Sprintf("校验和不匹配 (本地:%s vs 远程:%s)", localChecksum[:8], remoteChecksum[:8])
+							}
+						} else {
+							log.Printf("  获取远程校验和失败: %v", err2)
+						}
+					} else {
+						log.Printf("  获取本地校验和失败: %v", err1)
+					}
+				}
+			}
+
+			// 更新缓存
+			vs.mu.Lock()
+			vs.fileCache[remoteItemPath] = fileInfo
+			vs.mu.Unlock()
+
+			if needsSync {
+				log.Printf("文件需要同步: %s (大小: %d) - 原因: %s", remoteItemPath, entry.Size(), reason)
 				
 				vs.mu.Lock()
 				vs.fileCache[remoteItemPath] = fileInfo
@@ -417,19 +474,46 @@ func (vs *VPSSync) downloadFile(task SyncTask) error {
 
 	// 检查是否需要断点续传
 	var resumePos int64 = 0
+	var forceRedownload bool = false
+	
 	if vs.config.EnableResume {
 		if stat, err := os.Stat(task.LocalPath); err == nil {
 			if stat.Size() == task.Size {
-				log.Printf("文件已存在且完整，跳过: %s", task.RemotePath)
-				return nil
+				// 获取远程文件时间信息进行进一步检查
+				remoteInfo, remoteErr := vs.sftpClient.Stat(task.RemotePath)
+				if remoteErr == nil {
+					localTime := stat.ModTime().Unix()
+					remoteTime := remoteInfo.ModTime().Unix()
+					timeDiff := abs(localTime - remoteTime)
+					
+					log.Printf("文件大小相同，检查时间差异: %d秒", timeDiff)
+					
+					// 如果时间差异超过2秒，强制重新下载
+					if timeDiff > 2 {
+						log.Printf("时间差异太大，强制重新下载: %s", task.RemotePath)
+						forceRedownload = true
+					} else {
+						log.Printf("文件已存在且完整，跳过: %s", task.RemotePath)
+						return nil
+					}
+				} else {
+					log.Printf("无法获取远程文件信息，跳过: %s", task.RemotePath)
+					return nil
+				}
 			} else if stat.Size() < task.Size {
 				resumePos = stat.Size()
 				log.Printf("断点续传，从位置 %d 开始: %s", resumePos, task.RemotePath)
 			} else {
 				log.Printf("本地文件更大，删除重新下载: %s", task.LocalPath)
-				os.Remove(task.LocalPath)
+				forceRedownload = true
 			}
 		}
+	}
+	
+	// 如果需要强制重新下载，删除本地文件
+	if forceRedownload {
+		os.Remove(task.LocalPath)
+		resumePos = 0
 	}
 
 	// 大文件使用分块下载
@@ -764,6 +848,45 @@ func min(a, b int64) int64 {
 	return b
 }
 
+func abs(x int64) int64 {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+
+// calculateFileChecksum 计算文件的MD5校验和
+func calculateFileChecksum(filePath string) (string, error) {
+	file, err := os.Open(filePath)
+	if err != nil {
+		return "", err
+	}
+	defer file.Close()
+
+	hash := md5.New()
+	if _, err := io.Copy(hash, file); err != nil {
+		return "", err
+	}
+
+	return hex.EncodeToString(hash.Sum(nil)), nil
+}
+
+// calculateRemoteFileChecksum 计算远程文件的MD5校验和
+func (vs *VPSSync) calculateRemoteFileChecksum(remotePath string) (string, error) {
+	file, err := vs.sftpClient.Open(remotePath)
+	if err != nil {
+		return "", err
+	}
+	defer file.Close()
+
+	hash := md5.New()
+	if _, err := io.Copy(hash, file); err != nil {
+		return "", err
+	}
+
+	return hex.EncodeToString(hash.Sum(nil)), nil
+}
+
 func copyFile(src, dst string) error {
 	sourceFile, err := os.Open(src)
 	if err != nil {
@@ -802,6 +925,7 @@ func createSampleConfig() {
 		BufferSize:            64 * 1024,
 		MirrorSync:            false,
 		DeleteLocalFiles:      false,
+		UseChecksumVerify:     false,
 	}
 
 	data, _ := json.MarshalIndent(config, "", "  ")
@@ -867,7 +991,8 @@ func main() {
 	if err != nil {
 		log.Panic("无法打开日志文件:", err)
 	}
-	log.SetOutput(logFile)
+	// 同时输出到文件和控制台进行调试
+	log.SetOutput(io.MultiWriter(logFile, os.Stdout))
 
 	errFile, err := os.OpenFile("error.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
 	if err != nil {
@@ -878,8 +1003,8 @@ func main() {
 	// 将标准错误重定向到错误文件
 	os.Stderr = errFile
 
-	// 隐藏控制台窗口
-	hideConsoleWindow()
+	// 隐藏控制台窗口 - 临时注释调试用
+	// hideConsoleWindow()
 
 	// 启动日志文件管理器
 	go manageLogFile("out.txt", 10000, 5000) // 保留最新的 5000 行
