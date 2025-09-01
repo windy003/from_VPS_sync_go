@@ -552,6 +552,19 @@ func (vs *VPSSync) downloadFileSimple(task SyncTask, resumePos int64) error {
 		return fmt.Errorf("复制文件内容失败: %v", err)
 	}
 
+	// 设置本地文件的修改时间为远程文件的修改时间
+	if remoteInfo, err := vs.sftpClient.Stat(task.RemotePath); err == nil {
+		remoteTime := remoteInfo.ModTime()
+		log.Printf("设置文件时间 %s: %s", task.LocalPath, remoteTime.Format("2006-01-02 15:04:05"))
+		if err := os.Chtimes(task.LocalPath, remoteTime, remoteTime); err != nil {
+			log.Printf("设置文件时间失败: %v", err)
+		} else {
+			log.Printf("文件时间设置成功")
+		}
+	} else {
+		log.Printf("获取远程文件时间失败: %v", err)
+	}
+
 	log.Printf("下载文件成功: %s -> %s (复制了 %d 字节)", task.RemotePath, task.LocalPath, copied)
 	return nil
 }
@@ -635,6 +648,19 @@ func (vs *VPSSync) downloadFileChunked(task SyncTask, resumePos int64) error {
 	// 重命名临时文件
 	if err := os.Rename(tempPath, task.LocalPath); err != nil {
 		return err
+	}
+
+	// 设置本地文件的修改时间为远程文件的修改时间
+	if remoteInfo, err := vs.sftpClient.Stat(task.RemotePath); err == nil {
+		remoteTime := remoteInfo.ModTime()
+		log.Printf("设置文件时间 %s: %s", task.LocalPath, remoteTime.Format("2006-01-02 15:04:05"))
+		if err := os.Chtimes(task.LocalPath, remoteTime, remoteTime); err != nil {
+			log.Printf("设置文件时间失败: %v", err)
+		} else {
+			log.Printf("文件时间设置成功")
+		}
+	} else {
+		log.Printf("获取远程文件时间失败: %v", err)
 	}
 
 	log.Printf("分块下载完成: %s", task.RemotePath)

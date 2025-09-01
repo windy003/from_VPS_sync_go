@@ -8,7 +8,11 @@
       "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
       "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
       "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web/**)",
-      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web\\web_note_3\\instance/**)"
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web\\web_note_3\\instance/**)",
+      "Bash(./vps_sync_test.exe -config=from_vps_sync_config.json)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web\\web_host/**)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web\\web_host/**)",
+      "Read(D:\\files\\from_vps_sync\\144.202.26.208\\web\\web_host/**)"
     ],
     "deny": []
   }
