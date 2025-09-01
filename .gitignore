@@ -2,3 +2,4 @@ vps_sync_config.json
 out.txt
 error.txt
 .claude/
+from_vps_sync_config.json
